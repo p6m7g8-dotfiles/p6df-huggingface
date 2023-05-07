@@ -44,8 +44,10 @@
 
 #### p6df-huggingface/init.zsh:
 
+- p6df::modules::huggingface::clones()
 - p6df::modules::huggingface::deps()
 - p6df::modules::huggingface::init()
+- p6df::modules::huggingface::langs()
 
 
 
