@@ -48,6 +48,7 @@
 - p6df::modules::huggingface::deps()
 - p6df::modules::huggingface::init()
 - p6df::modules::huggingface::langs()
+- p6df::modules::huggingface::vscodes()
 
 
 

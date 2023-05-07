@@ -8,7 +8,7 @@
 ######################################################################
 p6df::modules::huggingface::deps() {
   ModuleDeps=(
-    p6m7g8-dotfiles/p6common
+    p6m7g8-dotfiles/p6df-jupyter
   )
 }
 
@@ -20,6 +20,20 @@ p6df::modules::huggingface::deps() {
 #>
 ######################################################################
 p6df::modules::huggingface::init() {
+
+  p6_return_void
+}
+
+######################################################################
+#<
+#
+# Function: p6df::modules::huggingface::vscodes()
+#
+#>
+######################################################################
+p6df::modules::huggingface::vscodes() {
+  
+  code --install-extension huggingface.huggingface
 
   p6_return_void
 }
