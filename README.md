@@ -44,11 +44,16 @@
 
 #### p6df-huggingface/init.zsh:
 
+- p6_hf_file_upload(path_or_fileobj, path_in_repo, repo_id)
+- p6_hf_hub_download(repo_id, filename, revision, cache_dir)
+- p6_hf_repo_create(repo_id)
+- p6df::modules::huggingface::aliases::init()
+- p6df::modules::huggingface::brews()
 - p6df::modules::huggingface::clones()
 - p6df::modules::huggingface::deps()
-- p6df::modules::huggingface::init()
 - p6df::modules::huggingface::langs()
 - p6df::modules::huggingface::vscodes()
+- str str = p6df::modules::huggingface::prompt::line()
 
 
 
