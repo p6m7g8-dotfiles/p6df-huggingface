@@ -36,8 +36,8 @@ p6df::modules::huggingface::vscodes() {
 p6df::modules::huggingface::external::brews() {
 
   # m1/arm
-  brew install cmake
-  brew install pkg-config
+  p6df::modules::homebrew::cli::brew::install cmake
+  p6df::modules::homebrew::cli::brew::install pkg-config
 }
 
 ######################################################################
@@ -49,7 +49,8 @@ p6df::modules::huggingface::external::brews() {
 ######################################################################
 p6df::modules::huggingface::aliases::init() {
 
-  alias p6_hft="pytest -p no:warnings -n auto --dist=loadfile ./tests/ $@"
+  p6_alias "p6_hft" "pytest -p no:warnings -n auto --dist=loadfile ./tests/ $@"
+  p6_alias "hft" "p6_hft"
 
   p6_return_void
 }
@@ -121,6 +122,7 @@ p6df::modules::huggingface::prompt::line() {
 
   # p6_return_str "$str"
 }
+
 # PYTORCH_TRANSFORMERS_CACHE
 # PYTORCH_PRETRAINED_BERT_CACHE
 # TRANSFORMERS_CACHE
