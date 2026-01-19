@@ -60,7 +60,6 @@ p6df::modules::huggingface::aliases::init() {
 #
 # Function: p6df::modules::huggingface::langs()
 #
-#  Environment:	 TODO
 #>
 ######################################################################
 p6df::modules::huggingface::langs() {
@@ -97,7 +96,7 @@ p6df::modules::huggingface::clones() {
 ######################################################################
 #<
 #
-# Function: str = p6df::modules::huggingface::prompt::mod()
+# Function: str str = p6df::modules::huggingface::prompt::mod()
 #
 #  Returns:
 #	str - str
