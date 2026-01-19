@@ -37,7 +37,7 @@
 - p6df::modules::huggingface::external::brews()
 - p6df::modules::huggingface::langs()
 - p6df::modules::huggingface::vscodes()
-- str str = p6df::modules::huggingface::prompt::mod()
+- str = p6df::modules::huggingface::prompt::mod()
 
 ## Hierarchy
 
