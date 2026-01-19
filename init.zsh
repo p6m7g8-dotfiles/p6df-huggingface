@@ -97,7 +97,7 @@ p6df::modules::huggingface::clones() {
 ######################################################################
 #<
 #
-# Function: str str = p6df::modules::huggingface::prompt::mod()
+# Function: str = p6df::modules::huggingface::prompt::mod()
 #
 #  Returns:
 #	str - str
