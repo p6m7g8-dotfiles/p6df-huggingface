@@ -5,8 +5,6 @@
 ## Badges
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Mergify](https://img.shields.io/endpoint.svg?url=https://gh.mergify.io/badges//p6df-huggingface/&style=flat)](https://mergify.io)
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](<https://gitpod.io/#https://github.com//p6df-huggingface>)
 
 ## Summary
 
@@ -23,7 +21,8 @@
 ### Aliases
 
 - hft IS p6_hft
-- p6_hft IS pytest -p no:warnings -n auto --dist=loadfile ./tests/ $@
+- p6_hft IS pytest -p no:warnings -n auto --dist=loadfile ./tests/
+
 ### Functions
 
 ## p6df-huggingface
@@ -39,7 +38,7 @@
 - p6df::modules::huggingface::external::brews()
 - p6df::modules::huggingface::langs()
 - p6df::modules::huggingface::vscodes()
-- str  = p6df::modules::huggingface::prompt::line()
+- str = p6df::modules::huggingface::prompt::mod()
 
 ## Hierarchy
 

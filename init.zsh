@@ -49,7 +49,7 @@ p6df::modules::huggingface::external::brews() {
 ######################################################################
 p6df::modules::huggingface::aliases::init() {
 
-  p6_alias "p6_hft" "pytest -p no:warnings -n auto --dist=loadfile ./tests/ $@"
+  p6_alias "p6_hft" "pytest -p no:warnings -n auto --dist=loadfile ./tests/"
   p6_alias "hft" "p6_hft"
 
   p6_return_void
@@ -60,17 +60,19 @@ p6df::modules::huggingface::aliases::init() {
 #
 # Function: p6df::modules::huggingface::langs()
 #
+#  Environment:	 TODO
 #>
 ######################################################################
 p6df::modules::huggingface::langs() {
 
-  pip install tensorflow
-  pip install pytorch
-  pip install transformers
-  pip install 'transformers[torch]'
-  pip install 'transformers[flax]'
+  # TODO: convert to uv
+  # pip install tensorflow
+  # pip install pytorch
+  # pip install transformers
+  # pip install 'transformers[torch]'
+  # pip install 'transformers[flax]'
 
-  pip install huggingface-hub
+  # pip install huggingface-hub
 
   python -c "from transformers import pipeline; print(pipeline('sentiment-analysis')('we love you'))"
 
@@ -92,42 +94,29 @@ p6df::modules::huggingface::clones() {
   p6_return_void
 }
 
-_p6_user=
-_p6_org=
 ######################################################################
 #<
 #
-# Function: str  = p6df::modules::huggingface::prompt::line()
+# Function: str = p6df::modules::huggingface::prompt::mod()
 #
 #  Returns:
-#	str - 
+#	str - str
 #
 #>
 ######################################################################
-p6df::modules::huggingface::prompt::line() {
-
-  p6_return_str ""
-  # if p6_string_blank "$_p6_user"; then
-  #   local user=$(huggingface-cli whoami | head -1)
-  #   local org=$(huggingface-cli whoami | awk -F: '/:/{print $2}')
-  #   _p6_user=$user
-  #   _p6_org=$org
-  # fi
-
-  # local str=""
-  # case $_p6_user in
-  # "*Not*") str="" ;;
-  # *) str="huggingface:\t$_p6_org/$_p6_user" ;;
-  # esac
-
-  # p6_return_str "$str"
-}
+p6df::modules::huggingface::prompt::mod() {
 
 # PYTORCH_TRANSFORMERS_CACHE
 # PYTORCH_PRETRAINED_BERT_CACHE
 # TRANSFORMERS_CACHE
 # HF_DATASETS_OFFLINE=1
 # https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables
+
+  local str=""
+
+  p6_return_str "$str"
+}
+
 
 ######################################################################
 #<
