@@ -49,7 +49,7 @@ p6df::modules::huggingface::external::brews() {
 ######################################################################
 p6df::modules::huggingface::aliases::init() {
 
-  p6_alias "p6_hft" "pytest -p no:warnings -n auto --dist=loadfile ./tests/ $@"
+  p6_alias "p6_hft" "pytest -p no:warnings -n auto --dist=loadfile ./tests/"
   p6_alias "hft" "p6_hft"
 
   p6_return_void

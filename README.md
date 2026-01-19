@@ -21,7 +21,7 @@
 ### Aliases
 
 - hft IS p6_hft
-- p6_hft IS pytest -p no:warnings -n auto --dist=loadfile ./tests/ $@
+- p6_hft IS pytest -p no:warnings -n auto --dist=loadfile ./tests/
 
 ### Functions
 
