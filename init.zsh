@@ -36,8 +36,8 @@ p6df::modules::huggingface::vscodes() {
 p6df::modules::huggingface::external::brews() {
 
   # m1/arm
-  p6df::modules::homebrew::cli::brew::install cmake
-  p6df::modules::homebrew::cli::brew::install pkg-config
+  p6df::core::homebrew::cli::brew::install cmake
+  p6df::core::homebrew::cli::brew::install pkg-config
 }
 
 ######################################################################
@@ -136,9 +136,9 @@ p6_hf_hub_download() {
   local revision="$3"
   local cache_dir="$4"
 
-  if [ -z "$revision" ] && [ -z "$cache_dir" ]; then
+  if p6_string_blank "$revision" && p6_string_blank "$cache_dir"; then
     python -c "from huggingface_hub import hf_hub_download; hf_hub_download(repo_id=\"$repo_id\", filename=\"$filename\")"
-  elif [ -z "$cache_dir" ]; then
+  elif p6_string_blank "$cache_dir"; then
     python -c "from huggingface_hub import hf_hub_download; hf_hub_download(repo_id=\"$repo_id\", filename=\"$filename\", revision=\"$revision\")"
   else
     python -c "from huggingface_hub import hf_hub_download; hf_hub_download(repo_id=\"$repo_id\", filename=\"$filename\", revision=\"$revision\", cache_dir=\"$cache_dir\")"
