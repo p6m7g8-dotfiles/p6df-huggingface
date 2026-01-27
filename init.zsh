@@ -21,7 +21,7 @@ p6df::modules::huggingface::deps() {
 ######################################################################
 p6df::modules::huggingface::vscodes() {
 
-  code --install-extension HuggingFace.huggingface-vscode
+  p6df::modules::vscode::extension::install HuggingFace.huggingface-vscode
 
   p6_return_void
 }
