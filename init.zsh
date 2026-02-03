@@ -88,7 +88,7 @@ p6df::modules::huggingface::langs() {
 ######################################################################
 p6df::modules::huggingface::clones() {
 
-  p6_github_login_clone "huggingface" "$P6_DFZ_SRC_FOCUSED_DIR"
+  p6_github_cli_parallel_clone "huggingface" "$P6_DFZ_SRC_FOCUSED_DIR"
 
   p6_return_void
 }
