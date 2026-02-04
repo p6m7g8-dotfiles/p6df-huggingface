@@ -42,8 +42,19 @@ TODO: Add a short summary of this module.
 ##### p6df-huggingface/init.zsh
 
 - `p6_hf_file_upload(path_or_fileobj, path_in_repo, repo_id)`
+  - Args:
+    - path_or_fileobj - 
+    - path_in_repo - 
+    - repo_id - 
 - `p6_hf_hub_download(repo_id, filename, revision, cache_dir)`
+  - Args:
+    - repo_id - 
+    - filename - 
+    - revision - 
+    - cache_dir - 
 - `p6_hf_repo_create(repo_id)`
+  - Args:
+    - repo_id - 
 - `p6df::modules::huggingface::aliases::init()`
 - `p6df::modules::huggingface::clones()`
 - `p6df::modules::huggingface::deps()`
