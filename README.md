@@ -18,7 +18,9 @@
 
 ## Summary
 
-TODO: Add a short summary of this module.
+p6df module for Hugging Face: Python ML utilities (`transformers`, `huggingface-hub`),
+prompt integration, aliases, and MCP server (`hf-mcp-server` via brew) for
+AI-driven model discovery and dataset management.
 
 ## Contributing
 
@@ -43,23 +45,24 @@ TODO: Add a short summary of this module.
 
 - `p6_hf_file_upload(path_or_fileobj, path_in_repo, repo_id)`
   - Args:
-    - path_or_fileobj - 
-    - path_in_repo - 
-    - repo_id - 
+    - path_or_fileobj
+    - path_in_repo
+    - repo_id
 - `p6_hf_hub_download(repo_id, filename, revision, cache_dir)`
   - Args:
-    - repo_id - 
-    - filename - 
-    - revision - 
-    - cache_dir - 
+    - repo_id
+    - filename
+    - revision
+    - cache_dir
 - `p6_hf_repo_create(repo_id)`
   - Args:
-    - repo_id - 
+    - repo_id
 - `p6df::modules::huggingface::aliases::init()`
 - `p6df::modules::huggingface::clones()`
 - `p6df::modules::huggingface::deps()`
 - `p6df::modules::huggingface::external::brews()`
 - `p6df::modules::huggingface::langs()`
+- `p6df::modules::huggingface::mcp()`
 - `p6df::modules::huggingface::vscodes()`
 - `str str = p6df::modules::huggingface::prompt::mod()`
 
