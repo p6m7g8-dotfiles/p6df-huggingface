@@ -180,3 +180,17 @@ p6_hf_file_upload() {
 
   python -c "from huggingface_hub import upload_file; upload_file(path_or_fileobj=\"$path_or_fileobj\", path_in_repo=\"$path_in_repo\", repo_id=\"$repo_id\")"
 }
+
+######################################################################
+#<
+#
+# Function: p6df::modules::huggingface::mcp()
+#
+#>
+######################################################################
+p6df::modules::huggingface::mcp() {
+
+  p6df::core::homebrew::cli::brew::install hf-mcp-server
+
+  p6_return_void
+}
