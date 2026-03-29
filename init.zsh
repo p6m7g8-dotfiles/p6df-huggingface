@@ -192,5 +192,8 @@ p6df::modules::huggingface::mcp() {
 
   p6df::core::homebrew::cli::brew::install hf-mcp-server
 
+  p6df::modules::anthropic::mcp::server::add "huggingface" "hf-mcp-server"
+  p6df::modules::openai::mcp::server::add "huggingface" "hf-mcp-server"
+
   p6_return_void
 }
