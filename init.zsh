@@ -52,6 +52,8 @@ p6df::modules::huggingface::external::brews() {
 ######################################################################
 p6df::modules::huggingface::aliases::init() {
 
+  local _module="$1"
+  local _dir="$2"
   p6_alias "p6_hft" "pytest -p no:warnings -n auto --dist=loadfile ./tests/"
   p6_alias "hft" "p6_hft"
 
@@ -99,14 +101,14 @@ p6df::modules::huggingface::clones() {
 ######################################################################
 #<
 #
-# Function: str str = p6df::modules::huggingface::prompt::mod()
+# Function: str str = p6df::modules::huggingface::profile::mod()
 #
 #  Returns:
 #	str - str
 #
 #>
 ######################################################################
-p6df::modules::huggingface::prompt::mod() {
+p6df::modules::huggingface::profile::mod() {
 
 # PYTORCH_TRANSFORMERS_CACHE
 # PYTORCH_PRETRAINED_BERT_CACHE
@@ -118,7 +120,6 @@ p6df::modules::huggingface::prompt::mod() {
 
   p6_return_str "$str"
 }
-
 
 ######################################################################
 #<
@@ -136,3 +137,4 @@ p6df::modules::huggingface::mcp() {
 
   p6_return_void
 }
+
