@@ -1,5 +1,11 @@
 # shellcheck shell=bash
 ######################################################################
+#<
+#
+# Function: p6df::modules::huggingface::deps()
+#
+#>
+######################################################################
 p6df::modules::huggingface::deps() {
   ModuleDeps=(
     p6m7g8-dotfiles/p6df-jupyter
@@ -7,6 +13,12 @@ p6df::modules::huggingface::deps() {
   )
 }
 
+######################################################################
+#<
+#
+# Function: p6df::modules::huggingface::aliases::init()
+#
+#>
 ######################################################################
 p6df::modules::huggingface::aliases::init() {
 
@@ -19,6 +31,12 @@ p6df::modules::huggingface::aliases::init() {
 }
 
 ######################################################################
+#<
+#
+# Function: p6df::modules::huggingface::external::brews()
+#
+#>
+######################################################################
 p6df::modules::huggingface::external::brews() {
 
   # m1/arm
@@ -28,6 +46,12 @@ p6df::modules::huggingface::external::brews() {
   p6_return_void
 }
 
+######################################################################
+#<
+#
+# Function: p6df::modules::huggingface::langs()
+#
+#>
 ######################################################################
 p6df::modules::huggingface::langs() {
 
@@ -46,6 +70,12 @@ p6df::modules::huggingface::langs() {
 }
 
 ######################################################################
+#<
+#
+# Function: p6df::modules::huggingface::mcp()
+#
+#>
+######################################################################
 p6df::modules::huggingface::mcp() {
 
   p6df::core::homebrew::cli::brew::install hf-mcp-server
@@ -57,6 +87,12 @@ p6df::modules::huggingface::mcp() {
 }
 
 ######################################################################
+#<
+#
+# Function: p6df::modules::huggingface::vscodes()
+#
+#>
+######################################################################
 p6df::modules::huggingface::vscodes() {
 
   p6df::modules::vscode::extension::install HuggingFace.huggingface-vscode
@@ -64,6 +100,15 @@ p6df::modules::huggingface::vscodes() {
   p6_return_void
 }
 
+######################################################################
+#<
+#
+# Function: str str = p6df::modules::huggingface::profile::mod()
+#
+#  Returns:
+#	str - str
+#
+#>
 ######################################################################
 p6df::modules::huggingface::profile::mod() {
 
@@ -81,36 +126,6 @@ p6df::modules::huggingface::profile::mod() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::huggingface::deps()
-#
-#>
-######################################################################
-#<
-#
-# Function: p6df::modules::huggingface::vscodes()
-#
-#>
-######################################################################
-#<
-#
-# Function: p6df::modules::huggingface::external::brews()
-#
-#>
-######################################################################
-#<
-#
-# Function: p6df::modules::huggingface::aliases::init()
-#
-#>
-######################################################################
-#<
-#
-# Function: p6df::modules::huggingface::langs()
-#
-#>
-######################################################################
-#<
-#
 # Function: p6df::modules::huggingface::clones()
 #
 #  Environment:	 P6_DFZ_SRC_FOCUSED_DIR
@@ -123,18 +138,3 @@ p6df::modules::huggingface::clones() {
   p6_return_void
 }
 
-######################################################################
-#<
-#
-# Function: str str = p6df::modules::huggingface::profile::mod()
-#
-#  Returns:
-#	str - str
-#
-#>
-######################################################################
-#<
-#
-# Function: p6df::modules::huggingface::mcp()
-#
-#>
