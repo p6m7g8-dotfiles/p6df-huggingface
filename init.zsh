@@ -16,7 +16,11 @@ p6df::modules::huggingface::deps() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::huggingface::aliases::init()
+# Function: p6df::modules::huggingface::aliases::init(_module, _dir)
+#
+#  Args:
+#	_module -
+#	_dir -
 #
 #>
 ######################################################################

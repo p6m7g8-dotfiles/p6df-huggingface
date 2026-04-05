@@ -18,9 +18,7 @@
 
 ## Summary
 
-p6df module for Hugging Face: Python ML utilities (`transformers`, `huggingface-hub`),
-prompt integration, aliases, and MCP server (`hf-mcp-server` via brew) for
-AI-driven model discovery and dataset management.
+TODO: Add a short summary of this module.
 
 ## Contributing
 
@@ -43,28 +41,17 @@ AI-driven model discovery and dataset management.
 
 ##### p6df-huggingface/init.zsh
 
-- `p6_hf_file_upload(path_or_fileobj, path_in_repo, repo_id)`
+- `p6df::modules::huggingface::aliases::init(_module, _dir)`
   - Args:
-    - path_or_fileobj
-    - path_in_repo
-    - repo_id
-- `p6_hf_hub_download(repo_id, filename, revision, cache_dir)`
-  - Args:
-    - repo_id
-    - filename
-    - revision
-    - cache_dir
-- `p6_hf_repo_create(repo_id)`
-  - Args:
-    - repo_id
-- `p6df::modules::huggingface::aliases::init()`
+    - _module
+    - _dir
 - `p6df::modules::huggingface::clones()`
 - `p6df::modules::huggingface::deps()`
 - `p6df::modules::huggingface::external::brews()`
 - `p6df::modules::huggingface::langs()`
 - `p6df::modules::huggingface::mcp()`
 - `p6df::modules::huggingface::vscodes()`
-- `str str = p6df::modules::huggingface::prompt::mod()`
+- `str str = p6df::modules::huggingface::profile::mod()`
 
 ## Hierarchy
 
