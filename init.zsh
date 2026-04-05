@@ -1,11 +1,5 @@
 # shellcheck shell=bash
 ######################################################################
-#<
-#
-# Function: p6df::modules::huggingface::deps()
-#
-#>
-######################################################################
 p6df::modules::huggingface::deps() {
   ModuleDeps=(
     p6m7g8-dotfiles/p6df-jupyter
@@ -13,42 +7,6 @@ p6df::modules::huggingface::deps() {
   )
 }
 
-######################################################################
-#<
-#
-# Function: p6df::modules::huggingface::vscodes()
-#
-#>
-######################################################################
-p6df::modules::huggingface::vscodes() {
-
-  p6df::modules::vscode::extension::install HuggingFace.huggingface-vscode
-
-  p6_return_void
-}
-
-######################################################################
-#<
-#
-# Function: p6df::modules::huggingface::external::brews()
-#
-#>
-######################################################################
-p6df::modules::huggingface::external::brews() {
-
-  # m1/arm
-  p6df::core::homebrew::cli::brew::install cmake
-  p6df::core::homebrew::cli::brew::install pkg-config
-
-  p6_return_void
-}
-
-######################################################################
-#<
-#
-# Function: p6df::modules::huggingface::aliases::init()
-#
-#>
 ######################################################################
 p6df::modules::huggingface::aliases::init() {
 
@@ -61,11 +19,15 @@ p6df::modules::huggingface::aliases::init() {
 }
 
 ######################################################################
-#<
-#
-# Function: p6df::modules::huggingface::langs()
-#
-#>
+p6df::modules::huggingface::external::brews() {
+
+  # m1/arm
+  p6df::core::homebrew::cli::brew::install cmake
+  p6df::core::homebrew::cli::brew::install pkg-config
+
+  p6_return_void
+}
+
 ######################################################################
 p6df::modules::huggingface::langs() {
 
@@ -83,6 +45,69 @@ p6df::modules::huggingface::langs() {
   p6_return_void
 }
 
+######################################################################
+p6df::modules::huggingface::mcp() {
+
+  p6df::core::homebrew::cli::brew::install hf-mcp-server
+
+  p6df::modules::anthropic::mcp::server::add "huggingface" "hf-mcp-server"
+  p6df::modules::openai::mcp::server::add "huggingface" "hf-mcp-server"
+
+  p6_return_void
+}
+
+######################################################################
+p6df::modules::huggingface::vscodes() {
+
+  p6df::modules::vscode::extension::install HuggingFace.huggingface-vscode
+
+  p6_return_void
+}
+
+######################################################################
+p6df::modules::huggingface::profile::mod() {
+
+# PYTORCH_TRANSFORMERS_CACHE
+# PYTORCH_PRETRAINED_BERT_CACHE
+# TRANSFORMERS_CACHE
+# HF_DATASETS_OFFLINE=1
+# https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables
+
+  local str=""
+
+  p6_return_str "$str"
+}
+
+######################################################################
+#<
+#
+# Function: p6df::modules::huggingface::deps()
+#
+#>
+######################################################################
+#<
+#
+# Function: p6df::modules::huggingface::vscodes()
+#
+#>
+######################################################################
+#<
+#
+# Function: p6df::modules::huggingface::external::brews()
+#
+#>
+######################################################################
+#<
+#
+# Function: p6df::modules::huggingface::aliases::init()
+#
+#>
+######################################################################
+#<
+#
+# Function: p6df::modules::huggingface::langs()
+#
+#>
 ######################################################################
 #<
 #
@@ -108,33 +133,8 @@ p6df::modules::huggingface::clones() {
 #
 #>
 ######################################################################
-p6df::modules::huggingface::profile::mod() {
-
-# PYTORCH_TRANSFORMERS_CACHE
-# PYTORCH_PRETRAINED_BERT_CACHE
-# TRANSFORMERS_CACHE
-# HF_DATASETS_OFFLINE=1
-# https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables
-
-  local str=""
-
-  p6_return_str "$str"
-}
-
-######################################################################
 #<
 #
 # Function: p6df::modules::huggingface::mcp()
 #
 #>
-######################################################################
-p6df::modules::huggingface::mcp() {
-
-  p6df::core::homebrew::cli::brew::install hf-mcp-server
-
-  p6df::modules::anthropic::mcp::server::add "huggingface" "hf-mcp-server"
-  p6df::modules::openai::mcp::server::add "huggingface" "hf-mcp-server"
-
-  p6_return_void
-}
-
